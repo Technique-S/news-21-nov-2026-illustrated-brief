@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1024px; height: 1024px;
+      font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+      background: #080b14;
+      color: #f2f5fb;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .header {
+      height: 120px; flex-shrink: 0;
+      display: flex; align-items: center; gap: 24px;
+      padding: 0 40px;
+      background: linear-gradient(135deg, #101a30 0%, #0a0e1a 100%);
+      border-bottom: 3px solid #22304f;
+    }
+    .cal {
+      width: 84px; height: 84px; flex-shrink: 0;
+      background: linear-gradient(160deg, #ff6b35, #e03410);
+      border-radius: 12px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(255,80,20,.35);
+    }
+    .cal .mon { font-size: 15px; font-weight: 800; letter-spacing: 1px; }
+    .cal .day { font-size: 42px; font-weight: 900; line-height: 1; }
+    .cal .yr { font-size: 13px; font-weight: 700; opacity: .9; }
+    .headtext h1 { font-size: 42px; font-weight: 900; letter-spacing: -1px; line-height: 1.05; }
+    .headtext .sub { font-size: 16px; color: #7fa8e8; font-weight: 700; letter-spacing: 3px; margin-top: 6px; }
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+      padding: 20px 34px;
+      min-height: 0;
+    }
+    .card {
+      background: linear-gradient(150deg, #141c30 0%, #0e1424 100%);
+      border: 1px solid #26365a;
+      border-top: 5px solid var(--a);
+      border-radius: 14px;
+      padding: 22px 26px;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .card .kicker { font-size: 15px; font-weight: 800; color: var(--a); letter-spacing: 2px; text-transform: uppercase; }
+    .card h2 { font-size: 30px; font-weight: 800; line-height: 1.13; margin: 10px 0 12px; color: #fff; }
+    .card p { font-size: 18px; line-height: 1.4; color: #c2d0e8; flex: 1; }
+    .card .num { font-size: 46px; line-height: 1; margin-bottom: 6px; }
+    .summit { --a: #ffd23f; }
+    .poland { --a: #ff5252; }
+    .icj    { --a: #2fe0a8; }
+    .market { --a: #ff9f1c; }
+    .footer {
+      height: 74px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-around;
+      padding: 0 34px;
+      background: #0c1120; border-top: 2px solid #22304f;
+      font-size: 15px; font-weight: 700; color: #9fb4d8;
+    }
+    .footer div { display: flex; align-items: center; gap: 9px; }
+    .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="cal">
+      <div class="mon">NOV</div>
+      <div class="day">21</div>
+      <div class="yr">2026</div>
+    </div>
+    <div class="headtext">
+      <h1>THE DAY IN WORLD NEWS</h1>
+      <div class="sub">SATURDAY · 21 NOVEMBER 2026</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card summit">
+      <div class="kicker">Diplomacy</div>
+      <div class="num">🤝</div>
+      <h2>TRUMP, XI & PUTIN SIGN NUCLEAR PEACE DECLARATION</h2>
+      <p>Historic three-way summit in Shenzhen. The three leaders pledge nuclear war "must never be fought." Ukraine, Korea and trade on the agenda — no ceasefire breakthrough.</p>
+    </div>
+
+    <div class="card poland">
+      <div class="kicker">NATO on edge</div>
+      <div class="num">🚀</div>
+      <h2>RUSSIAN MISSILE HITS POLAND</h2>
+      <p>A suspected Russian cruise missile strikes Polish soil near allied military drills. Warsaw calls it a deliberate provocation; NATO scrambles jets. Trump calls it a mistake.</p>
+    </div>
+
+    <div class="card icj">
+      <div class="kicker">World Court</div>
+      <div class="num">⚖️</div>
+      <h2>ICJ: MYANMAR GUILTY OF ROHINGYA GENOCIDE</h2>
+      <p>Landmark ruling orders safe, voluntary return of displaced Rohingya and recognises mass sexual violence. Bangladesh demands compensation; rights groups urge action.</p>
+    </div>
+
+    <div class="card market">
+      <div class="kicker">Global markets</div>
+      <div class="num">📉</div>
+      <h2>WALL STREET TUMBLES AS AI STOCKS SLIDE</h2>
+      <p>Tech shares sink after Trump threatens taxes on overseas data centers. Anthropic's record $2T IPO, Nvidia and AMD all fall. World Food Programme warns of hunger.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div><span class="dot" style="background:#ff5252"></span> Kyiv strikes kill 3</div>
+    <div><span class="dot" style="background:#ff9f1c"></span> COP31 stalled on fossil fuels</div>
+    <div><span class="dot" style="background:#2fe0a8"></span> Alcaraz 3–0 at ATP Finals</div>
+    <div><span class="dot" style="background:#ffd23f"></span> F1 Las Vegas under the lights</div>
+  </div>
+</body>
+</html>
